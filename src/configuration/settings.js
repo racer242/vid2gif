@@ -1,6 +1,8 @@
 require("dotenv").config();
 
 const settings = {
+  outputPath: "/public/output",
+  tempPath: "/public/temp",
   configurationPath: "/public/configuration.json",
   logFileName: "log.txt",
   logArchiveName: "log api {timestamp}.txt",
@@ -31,6 +33,7 @@ const settings = {
     updateStateFreq: 10,
     maxHistoryLength: 400,
     statsCheckInterval: 5000,
+    taskCheckInterval: 1000,
   },
 };
 export default settings;

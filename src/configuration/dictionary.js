@@ -1,4 +1,11 @@
 const dictionary = {
+  taskAccepted: {
+    message: "Задача принята в работу",
+  },
+  taskExists: {
+    error: "task",
+    message: "Уже есть задача в работе",
+  },
   responces: {
     error404: {
       error: "request",

@@ -11,6 +11,7 @@ import indexRouter from "./routes/indexRouter.js";
 
 import logRouter from "./routes/logRouter.js";
 import statsRouter from "./routes/statsRouter.js";
+import taskRouter from "./routes/taskRouter.js";
 
 import dictionary from "./configuration/dictionary.js";
 import settings from "./configuration/settings.js";
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use("/api/log/", logRouter);
 app.use("/api/stats/", statsRouter);
+app.use("/api/task/", taskRouter);
 
 // Роутер, обрабатывающий индекс
 app.use("/", indexRouter);
@@ -79,11 +81,11 @@ app.use(function (err, req, res, next) {
 // Состоянием является объект, в который передаются данные для мониторинга
 // Состояние модифицируется приложением и при любом запросе выдается актуальная
 // информация
-var apiState = {};
-app.set("apiState", apiState);
+var appState = {};
+app.set("appState", appState);
 
 // Создание API Manager и его запуск
-const apiApp = new ApiApp(apiState);
+const apiApp = new ApiApp(appState);
 apiApp.init();
 apiApp.start();
 

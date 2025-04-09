@@ -7,7 +7,7 @@ import { initLogger, registerLog, log } from "./services/Logger";
 
 import { createConfiguration } from "./configuration/Configuration";
 import RootManager from "./managers/RootManager";
-import CacheManager from "./managers/CacheManager";
+import TaskManager from "./managers/TaskManager";
 import path from "path";
 import StatsManager from "./managers/StatsManager";
 
@@ -77,7 +77,7 @@ class AdverterBuilderManager {
       this.data,
       this.rootManager_cycleFinishedHandler
     );
-    this.cacheManager = new CacheManager("system", this.data);
+    this.taskManager = new TaskManager("task", this.data);
     this.statsManager = new StatsManager("stats", this.data);
   }
 
@@ -87,7 +87,7 @@ class AdverterBuilderManager {
   init() {
     this.configuration.init();
     this.rootManager.init();
-    this.cacheManager.init();
+    this.taskManager.init();
     this.statsManager.init();
   }
 
@@ -97,7 +97,7 @@ class AdverterBuilderManager {
   start() {
     this.configuration.start();
     this.rootManager.start();
-    this.cacheManager.start();
+    this.taskManager.start();
     this.statsManager.start();
     log(this, dictionary.log.converterStartMessage);
 
@@ -111,7 +111,7 @@ class AdverterBuilderManager {
   destroy() {
     this.configuration.destroy();
     this.rootManager.destroy();
-    this.cacheManager.destroy();
+    this.taskManager.destroy();
     this.statsManager.destroy();
     clearTimeout(this.cycleTimeout);
   }
@@ -163,7 +163,7 @@ class AdverterBuilderManager {
     // Мониторинг конфигураций
     this.configuration.update();
     this.rootManager.update(this.configuration.data);
-    this.cacheManager.update(this.configuration.data);
+    this.taskManager.update(this.output);
     this.statsManager.update(this.output);
 
     this.output.stepCounter = this.stepCounter;

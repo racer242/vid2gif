@@ -1,10 +1,4 @@
 import express from "express";
-import dictionary from "../configuration/dictionary.js";
-import settings from "../configuration/settings.js";
-import { sendGetRequest } from "../helpers/httpTools.js";
-import { protectUrl } from "../helpers/urlTools.js";
-import { getConfiguration } from "../configuration/Configuration.js";
-import { getMatches } from "../helpers/stringTools.js";
 
 var router = express.Router();
 
@@ -17,7 +11,7 @@ router.get("/*", async (req, res, next) => {
   //   return;
   // }
 
-  res.json(req.app.get("apiState"));
+  res.json(req.app.get("appState"));
 });
 
 export default router;
