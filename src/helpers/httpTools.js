@@ -4,19 +4,30 @@ export const sendGetRequest = async (url) => {
   let response;
   response = await axios.get(url);
   return response?.data;
-}
+};
 
-export const sendPostRequest = async (url,data,headers) => {
+export const sendPostJsonRequest = async (url, data, headers) => {
   let response;
   response = await axios({
-    method: 'post',
+    method: "post",
     url: url,
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       ...headers,
-      ...data
+      ...data,
     },
     body: JSON.stringify(data),
+  });
+  return response?.data;
+};
+
+export const sendPostRequest = async (url, data, headers) => {
+  let response;
+  response = await axios({
+    method: "post",
+    url: url,
+    headers,
+    data,
   });
   return response?.data;
 };

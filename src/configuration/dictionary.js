@@ -27,9 +27,29 @@ const dictionary = {
       error: "server",
       content: "Внутренняя ошибка сервера",
     },
+
+    downloadVideoError: {
+      error: "task",
+      content: "Ошибка скачивания видео",
+    },
+    downloadImageError: {
+      error: "task",
+      content: "Ошибка скачивания изображения",
+    },
+    convertError: {
+      error: "task",
+      content: "Ошибка конвертации видео",
+    },
   },
 
   log: {
+    taskStarted: "02:Задача стартовала",
+    taskVideoDownloaded: "02:Видео успешно загружено",
+    taskImageDownloaded: "02:Изображение успешно загружено",
+    taskConverted: "02:Видео успешно сконвертировано",
+    taskCallback: "02:Callback успешно отправлен",
+    taskAdded: "02:Задача добавлена в очередь",
+
     converterStartMessage: "Сервис запущен",
     converterStopMessage: "Сервис остановлен",
 
@@ -40,6 +60,7 @@ const dictionary = {
     downloadImageError: "03:Ошибка скачивания изображения",
     convertError: "03:Ошибка конвертирования GIF",
     deleteError: "03:Не удается удалить файл",
+    callbackError: "03:Не удается вызвать callback после завершения задачи",
 
     undefinedLogError: "04:Попытка записи в незарегистрированный лог",
     logSaveError: "04:Не удалось записать лог на диск",

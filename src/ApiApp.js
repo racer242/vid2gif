@@ -7,24 +7,24 @@ import { initLogger, registerLog, log } from "./services/Logger";
 
 import { createConfiguration } from "./configuration/Configuration";
 import RootManager from "./managers/RootManager";
-import TaskManager from "./managers/TaskManager";
 import path from "path";
 import StatsManager from "./managers/StatsManager";
+import QueueManager from "./managers/QueueManager";
 
 /**
  * API Manager
  */
-class AdverterBuilderManager {
+class ApiApp {
   /**
    * Конструктор
    */
-  constructor(output) {
+  constructor(appState) {
     this.rootManager_cycleFinishedHandler =
       this.rootManager_cycleFinishedHandler.bind(this);
     this.map_changedHandler = this.map_changedHandler.bind(this);
     this.cycle = this.cycle.bind(this);
 
-    this.output = output;
+    this.appState = appState;
 
     this.totalCounter = 0;
     this.stepCounter = 0;
@@ -77,8 +77,8 @@ class AdverterBuilderManager {
       this.data,
       this.rootManager_cycleFinishedHandler
     );
-    this.taskManager = new TaskManager("task", this.data);
     this.statsManager = new StatsManager("stats", this.data);
+    this.queueManager = new QueueManager("queue", this.data);
   }
 
   /**
@@ -87,8 +87,8 @@ class AdverterBuilderManager {
   init() {
     this.configuration.init();
     this.rootManager.init();
-    this.taskManager.init();
     this.statsManager.init();
+    this.queueManager.init();
   }
 
   /**
@@ -97,8 +97,8 @@ class AdverterBuilderManager {
   start() {
     this.configuration.start();
     this.rootManager.start();
-    this.taskManager.start();
     this.statsManager.start();
+    this.queueManager.start();
     log(this, dictionary.log.converterStartMessage);
 
     // Запуск цикла индексации
@@ -111,8 +111,8 @@ class AdverterBuilderManager {
   destroy() {
     this.configuration.destroy();
     this.rootManager.destroy();
-    this.taskManager.destroy();
     this.statsManager.destroy();
+    this.queueManager.destroy();
     clearTimeout(this.cycleTimeout);
   }
 
@@ -163,12 +163,12 @@ class AdverterBuilderManager {
     // Мониторинг конфигураций
     this.configuration.update();
     this.rootManager.update(this.configuration.data);
-    this.taskManager.update(this.output);
-    this.statsManager.update(this.output);
+    this.statsManager.update(this.appState);
+    this.queueManager.update(this.appState);
 
-    this.output.stepCounter = this.stepCounter;
-    this.output.cycleCounter = this.cycleCounter;
-    this.output.log = this.consoleBuffer;
+    this.appState.stepCounter = this.stepCounter;
+    this.appState.cycleCounter = this.cycleCounter;
+    this.appState.log = this.consoleBuffer;
   }
 
   /**
@@ -196,4 +196,4 @@ class AdverterBuilderManager {
   }
 }
 
-export default AdverterBuilderManager;
+export default ApiApp;

@@ -19,23 +19,28 @@ router.post("/*", async (req, res, next) => {
   }
 
   let appState = req.app.get("appState");
-  if (
-    appState.task &&
-    appState.task.status != "ready" &&
-    appState.task.status != "error"
-  ) {
+
+  if (!appState.queue) appState.queue = [];
+  let queue = appState.queue;
+
+  let task = {
+    time: Date.now(),
+    ...req.query,
+    status: "init",
+  };
+
+  let findTask = queue.filter(
+    (v) => v.id === task.id && v.status != "ready" && v.status != "error"
+  );
+
+  if (findTask.length > 0) {
     res.json(dictionary.responces.taskExists);
   } else {
-    let task = {
-      time: Date.now(),
-      ...req.query,
-      status: "init",
-    };
-
     if (!testTask(task)) {
       res.json(dictionary.responces.taskCorrupted);
     } else {
-      appState.task = task;
+      task.status = "wait";
+      queue.push(task);
       res.json(dictionary.responces.taskAccepted);
     }
   }
