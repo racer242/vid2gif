@@ -1,12 +1,16 @@
 const dictionary = {
-  taskAccepted: {
-    message: "Задача принята в работу",
-  },
-  taskExists: {
-    error: "task",
-    message: "Уже есть задача в работе",
-  },
   responces: {
+    taskAccepted: {
+      message: "Задача принята в работу",
+    },
+    taskExists: {
+      error: "task",
+      message: "Уже есть задача в работе",
+    },
+    taskCorrupted: {
+      error: "task",
+      message: "В задаче недостаточно параметров",
+    },
     error404: {
       error: "request",
       message: "Запрос не предусмотрен",
@@ -31,6 +35,11 @@ const dictionary = {
 
     consoleMessage: "02:Консольный вывод:",
     errorMessage: "03:Вывод ошибки:",
+
+    downloadVideoError: "03:Ошибка скачивания видео",
+    downloadImageError: "03:Ошибка скачивания изображения",
+    convertError: "03:Ошибка конвертирования GIF",
+    deleteError: "03:Не удается удалить файл",
 
     undefinedLogError: "04:Попытка записи в незарегистрированный лог",
     logSaveError: "04:Не удалось записать лог на диск",

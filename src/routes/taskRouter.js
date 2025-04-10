@@ -4,6 +4,7 @@ import { pathExists } from "../helpers/fileTools.js";
 import path from "path";
 import appRoot from "app-root-path";
 import settings from "../configuration/settings.js";
+import { testTask } from "../helpers/taskTools.js";
 
 var router = express.Router();
 
@@ -18,18 +19,25 @@ router.post("/*", async (req, res, next) => {
   }
 
   let appState = req.app.get("appState");
-  if (appState.task && appState.task.status != "ready") {
-    res.json(dictionary.taskExists);
+  if (
+    appState.task &&
+    appState.task.status != "ready" &&
+    appState.task.status != "error"
+  ) {
+    res.json(dictionary.responces.taskExists);
   } else {
-    appState.task = {
+    let task = {
       time: Date.now(),
-      url: req.query.url,
-      type: req.query.type,
-      id,
+      ...req.query,
       status: "init",
     };
 
-    res.json(dictionary.taskAccepted);
+    if (!testTask(task)) {
+      res.json(dictionary.responces.taskCorrupted);
+    } else {
+      appState.task = task;
+      res.json(dictionary.responces.taskAccepted);
+    }
   }
 });
 

@@ -5,6 +5,9 @@
 dist
 build
 
+public/temp
+public/output
+
 ### macOS ###
 # General
 .DS_Store

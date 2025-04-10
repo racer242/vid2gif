@@ -524,3 +524,338 @@
 09.04.2025, 16:56:05 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
 09.04.2025, 16:56:06 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
 09.04.2025, 16:56:06 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:18 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:01:18 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:18 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:18 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:50 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:01:50 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:50 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:01:50 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:07 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:02:07 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:07 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:07 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:48 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:02:48 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:48 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:02:48 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:09 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:04:09 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:10 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:10 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:29 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:04:29 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:29 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:04:29 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:06:32 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:06:32 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:06:32 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:06:32 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:08:17 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:08:17 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:08:18 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:08:18 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:11:20 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:11:20 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:11:20 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:11:20 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:12:35 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:12:35 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:12:36 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:12:36 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:13 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:13:13 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:13 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:13 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:29 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:13:29 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:30 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:13:30 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:14:32 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:14:32 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:14:33 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:14:33 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:15:04 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:15:04 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:15:05 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:15:05 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:19:00 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:19:00 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:19:01 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:19:01 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:23:49 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:23:49 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:23:50 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:23:50 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:28:18 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:28:18 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:28:19 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:28:19 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:28:19 api/system(FileUpdateTracker) В наблюдаемом пространстве обнаружено изменение файла > update C:\GitWorkspace\Vid2Gif\vid2gif\public\configuration.json
+09.04.2025, 17:29:47 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:29:47 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:29:48 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:29:48 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:23 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:30:23 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:23 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:23 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:33 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:30:33 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:33 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:30:33 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:31:47 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:31:47 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:31:47 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:31:47 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:35:29 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:35:29 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:35:30 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:35:30 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:20 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:41:20 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:20 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:20 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:45 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:41:45 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:46 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:41:46 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:42:53 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:42:53 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:42:54 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:42:54 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:43:37 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:43:37 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:43:38 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:43:38 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:45:30 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 17:45:30 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:45:31 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 17:45:31 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:02:16 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:02:16 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:02:17 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:02:17 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:02:17 api/system(FileUpdateTracker) В наблюдаемом пространстве обнаружено изменение файла > update C:\GitWorkspace\Vid2Gif\vid2gif\public\configuration.json
+09.04.2025, 20:04:21 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:04:21 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:04:22 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:04:22 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:06:27 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:06:27 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:06:28 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:06:28 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:12:22 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:12:22 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:12:23 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:12:23 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:19:13 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:19:13 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:19:14 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:19:14 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:20:13 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:20:13 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:20:14 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:20:14 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:23:49 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:23:49 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:23:49 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:23:49 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:25:28 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:25:28 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:25:29 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:25:29 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:26:25 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:26:25 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:26:25 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:26:25 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:27:32 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:27:32 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:27:33 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:27:33 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:28:20 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:28:20 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:28:20 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:28:20 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:29:40 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:29:40 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:29:41 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:29:41 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:30:23 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:30:23 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:30:24 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:30:24 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:31:52 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:31:52 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:31:53 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:31:53 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:33:09 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:33:09 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:33:10 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:33:10 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:37:59 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:37:59 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:38:00 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:38:00 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:39:23 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:39:23 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:39:24 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:39:24 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:02 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:40:02 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:03 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:03 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:30 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:40:30 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:31 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:40:31 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:42:58 api/system(AdverterBuilderManager) Сервис запущен > 
+09.04.2025, 20:42:58 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:42:58 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+09.04.2025, 20:42:58 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:29:07 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:29:07 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:29:08 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:29:08 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:31:11 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:31:11 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:31:12 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:31:12 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:32:42 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:32:42 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:32:43 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:32:43 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:33:01 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:33:01 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:33:02 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:33:02 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:35:12 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:35:12 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:35:13 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:35:13 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:36:05 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:36:05 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:36:06 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:36:06 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:54:16 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 16:54:16 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:54:18 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 16:54:18 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:06:30 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:06:30 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:06:32 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:06:32 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:07:58 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:07:58 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:07:59 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:07:59 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:09 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:09:09 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:10 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:10 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:54 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:09:54 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:55 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:09:55 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:12:23 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:12:23 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:12:23 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:12:23 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:13:36 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:13:36 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:13:37 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:13:37 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:16:25 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:16:25 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:16:26 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:16:26 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:18:48 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:18:48 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:18:49 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:18:49 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:19:22 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:19:22 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:19:23 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:19:23 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:38 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:20:38 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:38 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:38 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:54 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:20:54 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:55 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:20:55 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:21:51 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:21:51 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:21:52 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:21:52 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:23:24 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:23:24 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:23:25 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:23:25 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:25:41 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:25:41 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:25:42 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:25:42 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:26:14 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:26:14 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:26:14 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:26:14 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:01 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:27:01 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:02 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:02 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:19 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:27:19 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:19 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:27:19 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:31:19 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:31:19 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:31:20 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:31:20 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:31:21 api/system(FileUpdateTracker) В наблюдаемом пространстве обнаружено изменение файла > update C:\GitWorkspace\Vid2Gif\vid2gif\public\configuration.json
+10.04.2025, 17:32:27 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:32:27 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:32:27 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:32:27 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:33:40 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:33:40 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:33:40 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:33:40 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:36:17 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:36:17 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:36:18 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:36:18 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:39:41 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:39:41 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:39:42 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:39:42 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:41:11 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:41:11 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:41:11 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:41:11 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:41:59 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:41:59 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:42:00 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:42:00 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:52:16 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:52:16 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:52:17 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:52:17 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:53:08 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:53:08 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:53:08 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:53:08 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:54:22 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:54:22 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:54:22 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:54:22 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:55:24 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:55:24 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:55:25 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:55:25 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:56:27 api/system(AdverterBuilderManager) Сервис запущен > 
+10.04.2025, 17:56:27 api/system(Configuration) Путь файла карты изменился > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:56:28 api/system(FileUpdateTracker) Файл принят под наблюдение > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json
+10.04.2025, 17:56:28 api/system(JsonMap) Карта успешно загружена > C:\GitWorkspace\Vid2Gif\vid2gif/public/configuration.json

@@ -34,6 +34,10 @@ const settings = {
     maxHistoryLength: 400,
     statsCheckInterval: 5000,
     taskCheckInterval: 1000,
+    videoStart: 1,
+    videoDuration: 7,
+    videoSize: 420,
+    videoFps: 24,
   },
 };
 export default settings;
