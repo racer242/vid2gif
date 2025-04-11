@@ -3,61 +3,60 @@ export const getIsImageFileName = (data) => {
     return true;
   }
   return false;
-}
+};
 
 export const getImageType = (data) => {
-  let result=(/\.(gif|jpg|jpeg|svg|png)$/gim).exec(data);
+  let result = /\.(gif|jpg|jpeg|svg|png)$/gim.exec(data);
   if (result) {
     return result[1];
   }
   return null;
-}
+};
 
 export const getFilePath = (data) => {
-  let regExp=/(.+[\\\/]|^)*(?:.+?)$/gim;
-  let match=regExp.exec(data);
+  let regExp = /(.+[\\\/]|^)*(?:.+?)$/gim;
+  let match = regExp.exec(data);
   if (match) {
     return match[1];
   }
   return null;
-}
+};
 
 export const getFileName = (data) => {
-  let regExp=/(?:.+[\\\/]|^)*(.+?)(?:\.[^.]*$|$)/gim;
-  let match=regExp.exec(data);
+  let regExp = /(?:.+[\\\/]|^)*(.+?)(?:\.[^.]*$|$)/gim;
+  let match = regExp.exec(data);
   if (match) {
     return match[1];
   }
   return null;
-}
+};
 
 export const getFileExt = (data) => {
-  let regExp=/\.([^.]*?)(?=\?|#|$)/gim;
-  let match=regExp.exec(data);
+  let regExp = /\.([^.]*?)(?=\?|#|$)/gim;
+  let match = regExp.exec(data);
   if (match) {
     return match[1];
   }
   return null;
-}
+};
 
 export const getFileNameExt = (data) => {
-  let regExp=/(?:.+[\\\/]|^)*(.+?)$/gim;
-  let match=regExp.exec(data);
+  let regExp = /(?:.+[\\\/]|^)*(.+?)$/gim;
+  let match = regExp.exec(data);
   if (match) {
     return match[1];
   }
   return null;
-}
+};
 
-export const getMatches = (regexp,data,matchCount) =>
-{
+export const getMatches = (regexp, data, matchCount) => {
   let matchArray;
   let result = [];
   while ((matchArray = regexp.exec(data)) !== null) {
     if (!matchCount) {
       result.push(matchArray[1]);
     } else {
-      let matches=[];
+      let matches = [];
       for (let i = 1; i <= matchCount; i++) {
         matches.push(matchArray[i]);
       }
@@ -65,52 +64,49 @@ export const getMatches = (regexp,data,matchCount) =>
     }
   }
   return result;
-}
+};
 
-export const split = (source) =>
-{
-  let result=[];
+export const split = (source) => {
+  let result = [];
   if (source) {
-    result=source.split(/\s*,\s*/);
+    result = source.split(/\s*,\s*/);
     // for (let i = 0; i < parseArray.length; i++) {
     //   result.push(String(parseArray[i]).trim());
     // }
   }
   return result;
-}
+};
 
-export const replaceObject = (object,data) => {
+export const replaceObject = (object, data) => {
   if (data) {
     for (let name in object) {
-      let regExp = new RegExp(name,"g");
-      data=data.replace(regExp,object[name]);
+      let regExp = new RegExp(name, "g");
+      data = data.replace(regExp, object[name]);
     }
   } else {
-    data="";
+    data = "";
   }
   return data;
-}
+};
 
-export const contractString = (source,width,stump,dots,begin) =>
-{
-  if (source.length>width) {
-
+export const contractString = (source, width, stump, dots, begin) => {
+  if (source?.length > width) {
     if (!stump) {
-      stump=3;
+      stump = 3;
     }
     if (!dots) {
-      dots=2;
+      dots = 2;
     }
-    let first=width-stump-dots;
-    let pad = width-stump;
-    let last=-stump;
+    let first = width - stump - dots;
+    let pad = width - stump;
+    let last = -stump;
     if (begin) {
-      first=stump;
-      pad = first+dots;
-      last=-(width-stump-dots);
+      first = stump;
+      pad = first + dots;
+      last = -(width - stump - dots);
     }
 
-    source=source.slice(0,first).padEnd(pad,".")+source.slice(last);
+    source = source.slice(0, first).padEnd(pad, ".") + source.slice(last);
   }
   return source;
-}
+};

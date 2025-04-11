@@ -23,36 +23,44 @@ class QueueManager extends AbstractManager {
       this.lastTime = Date.now();
       this.processQueue(data);
     }
+    this.callFinishCallback();
   }
 
   manager_completeHandler(manager) {
     log(this, dictionary.log.taskCompletes, manager.task.id);
-    this.managers = this.managers.filter((v) => v === manager);
+    this.managers = this.managers.filter((v) => v !== manager);
     manager.destroy();
   }
 
   processQueue(data) {
-    if (data?.queue && this.managers.length <= this.data.maxThreads) {
+    if (data?.queue) {
       let findTask = data.queue.filter((v) => v.status === "wait");
-
       if (findTask.length > 0) {
-        let task = findTask[0];
-        log(this, dictionary.log.taskAdded, task.id);
-        let manager = new TaskManager(
-          "task",
-          this.data,
-          this.manager_completeHandler
-        );
-        this.managers.push(manager);
-        manager.init();
-        manager.start();
-        manager.startTask(task);
-      }
-    } else {
-      if (this.managers.length >= this.data.maxThreads) {
-        log(this, dictionary.log.tooManyTasksError);
+        if (this.managers.length >= this.data.maxThreads) {
+          log(this, dictionary.log.tooManyTasksError);
+        } else {
+          let task = findTask[0];
+          log(this, dictionary.log.taskAdded, task.id);
+          let manager = new TaskManager(
+            "task",
+            this.data,
+            this.manager_completeHandler
+          );
+          this.managers.push(manager);
+          manager.init();
+          manager.start();
+          manager.startTask(task);
+        }
       }
     }
+  }
+
+  destroy() {
+    for (let manager of this.managers) {
+      manager.destroy();
+    }
+    this.managers = [];
+    super.destroy();
   }
 }
 

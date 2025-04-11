@@ -13,7 +13,7 @@ class Configuration extends MultiMap {
   }
 
   newPath() {
-    return appRoot + settings.configurationPath;
+    return settings.configurationPath;
   }
 }
 

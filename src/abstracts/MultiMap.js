@@ -72,10 +72,7 @@ class MultiMap {
    * Действия при изменении пути
    * Используется потомками
    */
-  onNewPath() {
-    let path = getFilePath(this.path);
-    registerLog(this, { path: path });
-  }
+  onNewPath() {}
 
   createMap(ext) {
     let mapFactory = this.parsing[ext].factory;

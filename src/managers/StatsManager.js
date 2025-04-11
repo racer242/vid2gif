@@ -47,6 +47,7 @@ class StatsManager extends AbstractManager {
       this.updateState(data);
       this.lastTime = Date.now();
     }
+    this.callFinishCallback();
   }
 
   registerRequestStats(stats) {
@@ -112,6 +113,10 @@ class StatsManager extends AbstractManager {
     });
     output.publicIp = this.publicIp;
     output.internalIp = this.internalIp;
+  }
+
+  destroy() {
+    super.destroy();
   }
 }
 

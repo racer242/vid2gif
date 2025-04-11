@@ -223,7 +223,9 @@ class Logger {
       if (extId != "") id += "/" + extId;
 
       let fullId = this.params.appName + "/" + id;
+
       id = contractString(fullId, this.params.idWidth, 10, 2, true);
+
       let source = contractString(
         ids.name,
         this.params.sourceWidth - this.params.idWidth
@@ -300,16 +302,16 @@ class Logger {
   async logError(message, data) {
     let messageProps = this.getMessageProps(message);
     if (this.logs[this.params.errorLogId][0]) {
-      this.logToConsole(this, messageProps.level, messageProps.message);
+      this.logToConsole(this.ids, messageProps.level, messageProps.message);
       await this.writeToLog(
         this.logs[this.params.errorLogId][0],
         this.composeData(this.ids, message, data)
       );
     } else {
       let messageProps = this.getMessageProps(this.params.undefinedErrorLog);
-      this.logToConsole(this, messageProps.level, messageProps.message);
+      this.logToConsole(this.ids, messageProps.level, messageProps.message);
       if (this.logs[this.params.systemLogId][0]) {
-        this.logToConsole(this, messageProps.level, messageProps.message);
+        this.logToConsole(this.ids, messageProps.level, messageProps.message);
         await this.writeToLog(
           this.logs[this.params.systemLogId][0],
           this.composeData(this.ids, message, data)

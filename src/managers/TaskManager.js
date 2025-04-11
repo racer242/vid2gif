@@ -98,7 +98,7 @@ class TaskManager extends AbstractManager {
   }
 
   async downloadVideo() {
-    let fileDir = path.join(appRoot.path, settings.tempPath);
+    let fileDir = settings.tempLocation;
     makeDir(fileDir);
     this.task.videoPath = path.join(
       fileDir,
@@ -110,19 +110,19 @@ class TaskManager extends AbstractManager {
       url,
       responseType: "stream",
     });
-    response.data.pipe(fs.createWriteStream(this.task.videoPath));
-    return new Promise((resolve, reject) => {
-      response.data.on("end", () => {
-        resolve();
+    const writeStream = fs.createWriteStream(this.task.videoPath);
+    await response.data.pipe(writeStream);
+    async function write() {
+      return new Promise((resolve, reject) => {
+        writeStream.on("finish", resolve);
+        writeStream.on("error", reject);
       });
-      response.data.on("error", () => {
-        reject();
-      });
-    });
+    }
+    await write();
   }
 
   async downloadImage() {
-    let fileDir = path.join(appRoot.path, settings.tempPath);
+    let fileDir = settings.tempLocation;
     makeDir(fileDir);
     this.task.imagePath = path.join(fileDir, this.task.id + ".png");
     let url = encodeURI(this.task.img);
@@ -131,19 +131,19 @@ class TaskManager extends AbstractManager {
       url,
       responseType: "stream",
     });
-    response.data.pipe(fs.createWriteStream(this.task.imagePath));
-    return new Promise((resolve, reject) => {
-      response.data.on("end", () => {
-        resolve();
+    const writeStream = fs.createWriteStream(this.task.imagePath);
+    await response.data.pipe(writeStream);
+    async function write() {
+      return new Promise((resolve, reject) => {
+        writeStream.on("finish", resolve);
+        writeStream.on("error", reject);
       });
-      response.data.on("error", () => {
-        reject();
-      });
-    });
+    }
+    await write();
   }
 
   async convertTask() {
-    let fileDir = path.join(appRoot.path, settings.outputPath);
+    let fileDir = settings.outputLocation;
     makeDir(fileDir);
     this.task.gifPath = path.join(fileDir, this.task.id + ".gif");
     let options = [];

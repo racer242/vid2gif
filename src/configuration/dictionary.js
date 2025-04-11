@@ -20,7 +20,7 @@ const dictionary = {
       message: "Запрашиваемый ресурс недоступен",
     },
     index: {
-      about: "Adverter API. Сервис автосборки баннеров.",
+      about: "API конвертера Video 2 Gif.",
     },
     dashboard: {},
     error: {
@@ -51,12 +51,6 @@ const dictionary = {
     taskAdded: "02:Задача добавлена в очередь",
     taskCompletes: "02:Задача завершена",
 
-    converterStartMessage: "Сервис запущен",
-    converterStopMessage: "Сервис остановлен",
-
-    consoleMessage: "02:Консольный вывод:",
-    errorMessage: "03:Вывод ошибки:",
-
     downloadVideoError: "03:Ошибка скачивания видео",
     downloadImageError: "03:Ошибка скачивания изображения",
     convertError: "03:Ошибка конвертирования GIF",
@@ -65,6 +59,11 @@ const dictionary = {
 
     tooManyTasksError:
       "03:Нет возможности взять задачу в работу, все сборщики заняты",
+
+    serviceStartMessage: "Сервис запущен",
+    serviceStopMessage: "Сервис остановлен",
+    consoleMessage: "02:Консольный вывод:",
+    errorMessage: "03:Вывод ошибки:",
 
     undefinedLogError: "04:Попытка записи в незарегистрированный лог",
     logSaveError: "04:Не удалось записать лог на диск",
@@ -84,7 +83,6 @@ const dictionary = {
     mapIsEmptyError: "04:Карта не содержит данных",
     mapParseError: "04:Ошибка разбора карты",
     mapLoaded: "Карта успешно загружена",
-    mapSheetNotFoundError: "04:В xlsx файле не найден лист с картой",
     mapWrongExtensionError:
       "04:Указан файл карты незарегистрированного формата:",
 

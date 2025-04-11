@@ -1,5 +1,3 @@
-import appRoot from "app-root-path";
-
 import settings from "./configuration/settings";
 import dictionary from "./configuration/dictionary";
 
@@ -7,9 +5,7 @@ import { initLogger, registerLog, log } from "./services/Logger";
 
 import { createConfiguration } from "./configuration/Configuration";
 import RootManager from "./managers/RootManager";
-import path from "path";
-import StatsManager from "./managers/StatsManager";
-import QueueManager from "./managers/QueueManager";
+import { displayIteration } from "./helpers/outputTools";
 
 /**
  * API Manager
@@ -36,7 +32,7 @@ class ApiApp {
       new RegExp(dictionary.replace.id.source, dictionary.replace.id.flags),
       settings.builderId
     );
-    let logFilePath = path.join(appRoot.path, settings.systemLogPath);
+    let logFilePath = settings.systemLogLocation;
 
     this.consoleBuffer = [];
 
@@ -77,8 +73,6 @@ class ApiApp {
       this.data,
       this.rootManager_cycleFinishedHandler
     );
-    this.statsManager = new StatsManager("stats", this.data);
-    this.queueManager = new QueueManager("queue", this.data);
   }
 
   /**
@@ -87,8 +81,6 @@ class ApiApp {
   init() {
     this.configuration.init();
     this.rootManager.init();
-    this.statsManager.init();
-    this.queueManager.init();
   }
 
   /**
@@ -97,9 +89,7 @@ class ApiApp {
   start() {
     this.configuration.start();
     this.rootManager.start();
-    this.statsManager.start();
-    this.queueManager.start();
-    log(this, dictionary.log.converterStartMessage);
+    log(this, dictionary.log.serviceStartMessage);
 
     // Запуск цикла индексации
     this.cycle();
@@ -111,25 +101,19 @@ class ApiApp {
   destroy() {
     this.configuration.destroy();
     this.rootManager.destroy();
-    this.statsManager.destroy();
-    this.queueManager.destroy();
     clearTimeout(this.cycleTimeout);
   }
 
   /**
-   * Цикл мониторинга пространства Adverter
+   * Цикл мониторинга пространства
    */
   cycle() {
     this.iteration();
-
-    this.cycleTimeout = setTimeout(
-      this.cycle,
-      this.configuration.data.updateInterval
-    );
+    this.cycleTimeout = setTimeout(this.cycle, this.data.updateInterval);
   }
 
   registerRequestStats(stats) {
-    this.statsManager.registerRequestStats(stats);
+    this.rootManager.registerRequestStats(stats);
   }
 
   /**
@@ -139,32 +123,10 @@ class ApiApp {
     this.totalCounter++;
     this.stepCounter++;
 
-    // Вывод активности в консоль
-    process.stdout.cursorTo(0);
-    process.stdout.clearLine();
-    process.stdout.write(
-      "\x1b[32m" +
-        " Cycle:" +
-        "\x1b[0m" +
-        this.cycleCounter +
-        "\x1b[32m" +
-        " Step:" +
-        "\x1b[0m" +
-        this.stepCounter +
-        " " +
-        "\x1b[32m" +
-        dictionary.animation[
-          (this.cycleCounter + this.stepCounter) % dictionary.animation.length
-        ] +
-        "\x1b[0m"
-    );
-    process.stdout.cursorTo(0);
+    displayIteration(this.cycleCounter, this.stepCounter);
 
-    // Мониторинг конфигураций
     this.configuration.update();
-    this.rootManager.update(this.configuration.data);
-    this.statsManager.update(this.appState);
-    this.queueManager.update(this.appState);
+    this.rootManager.update(this.appState);
 
     this.appState.stepCounter = this.stepCounter;
     this.appState.cycleCounter = this.cycleCounter;
@@ -182,7 +144,7 @@ class ApiApp {
   /**
    * Обработчик обновления корневых конфигураций
    * Обновление корневых конфигураций на столько значимо, что необходимо
-   * пересоздать все менеджеры пространства Adverter (начиная с корневого)
+   * пересоздать все менеджеры пространства (начиная с корневого)
    */
   map_changedHandler() {
     this.rootManager.destroy();

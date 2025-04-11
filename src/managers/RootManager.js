@@ -3,6 +3,8 @@
  */
 
 import AbstractManager from "../abstracts/AbstractManager";
+import QueueManager from "./QueueManager";
+import StatsManager from "./StatsManager";
 
 class RootManager extends AbstractManager {
   /**
@@ -10,6 +12,36 @@ class RootManager extends AbstractManager {
    */
   constructor(id, data, finishCallback, createdCallback) {
     super(id, data, finishCallback, createdCallback);
+  }
+
+  createChildren() {
+    let statsManager = new StatsManager("stats", this.data, () => {
+      this.childFinished(),
+        () => {
+          this.childCreated();
+        };
+    });
+    this.statsManager = statsManager;
+    statsManager.init();
+    this.managers.push(statsManager);
+
+    let queueManager = new QueueManager("queue", this.data, () => {
+      this.childFinished(),
+        () => {
+          this.childCreated();
+        };
+    });
+    queueManager.init();
+    this.managers.push(queueManager);
+  }
+
+  registerRequestStats(stats) {
+    this.statsManager?.registerRequestStats(stats);
+  }
+
+  destroyChildren() {
+    super.destroyChildren();
+    this.statsManager = null;
   }
 }
 

@@ -12,7 +12,7 @@ var router = express.Router();
 router.post("/*", async (req, res, next) => {
   let id = req.query.id;
 
-  let filePath = path.join(appRoot.path, settings.outputPath, id + ".gif");
+  let filePath = path.join(settings.outputLocation, id + ".gif");
   if (pathExists(filePath)) {
     res.sendFile(filePath);
     return;

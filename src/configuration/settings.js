@@ -1,19 +1,36 @@
+import path from "path";
+import appRoot from "app-root-path";
+
 require("dotenv").config();
 
 const settings = {
-  outputPath: "/public/output",
-  tempPath: "/public/temp",
-  configurationPath: "/public/configuration.json",
   logFileName: "log.txt",
   logArchiveName: "log api {timestamp}.txt",
-  systemLogPath: "/public",
   errorLogId: "root",
   systemLogId: "system",
   logsFolderName: ".logs",
+
+  maxLogSize: process.env.MAX_LOG_SIZE || 400,
+
   logArchiveLocation: process.env.LOG_ARCHIVE_LOCATION
     ? String(process.env.LOG_ARCHIVE_LOCATION)
     : null,
-  maxLogSize: process.env.MAX_LOG_SIZE || 400,
+
+  systemLogLocation: process.env.SYSTEM_LOG_LOCATION
+    ? String(process.env.SYSTEM_LOG_LOCATION)
+    : path.join(appRoot.path, "/public"),
+
+  outputLocation: process.env.OUTPUT_LOCATION
+    ? String(process.env.OUTPUT_LOCATION)
+    : path.join(appRoot.path, "/public/output"),
+
+  tempLocation: process.env.TEMP_LOCATION
+    ? String(process.env.TEMP_LOCATION)
+    : path.join(appRoot.path, "/public/temp"),
+
+  configurationPath: process.env.CONFIGURATION_PATH
+    ? String(process.env.CONFIGURATION_PATH)
+    : path.join(appRoot.path, "/public/configuration.json"),
 
   consoleOutputLevels: process.env.CONSOLE_LEVELS
     ? String(process.env.CONSOLE_LEVELS)
@@ -39,7 +56,7 @@ const settings = {
     videoDuration: 7,
     videoSize: 420,
     videoFps: 24,
-    maxThreads: 1,
+    maxThreads: 3,
   },
 };
 export default settings;

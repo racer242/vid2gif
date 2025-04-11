@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import settings from "../configuration/settings.js";
 import { readFile } from "../helpers/fileTools.js";
-import appRootPath from "app-root-path";
 import dictionary from "../configuration/dictionary.js";
 
 // Создаем роутер
@@ -17,7 +16,7 @@ logRouter.get("/*", function (req, res, next) {
   //   return;
   // }
 
-  let logFilePath = path.join(appRootPath.path, settings.systemLogPath);
+  let logFilePath = settings.systemLogLocation;
   let logFileName = settings.logFileName.replace(
     new RegExp(dictionary.replace.id.source, dictionary.replace.id.flags),
     settings.builderId
