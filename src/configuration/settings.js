@@ -39,7 +39,7 @@ const settings = {
     videoDuration: 7,
     videoSize: 420,
     videoFps: 24,
-    maxThreads: 3,
+    maxThreads: 1,
   },
 };
 export default settings;

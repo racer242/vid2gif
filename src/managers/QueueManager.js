@@ -15,6 +15,7 @@ class QueueManager extends AbstractManager {
     super(id, data, finishCallback, createdCallback);
     this.lastTime = 0;
     this.managers = [];
+    this.manager_completeHandler = this.manager_completeHandler.bind(this);
   }
 
   update(data) {
@@ -24,22 +25,32 @@ class QueueManager extends AbstractManager {
     }
   }
 
+  manager_completeHandler(manager) {
+    log(this, dictionary.log.taskCompletes, manager.task.id);
+    this.managers = this.managers.filter((v) => v === manager);
+    manager.destroy();
+  }
+
   processQueue(data) {
-    if (data?.queue) {
+    if (data?.queue && this.managers.length <= this.data.maxThreads) {
       let findTask = data.queue.filter((v) => v.status === "wait");
 
       if (findTask.length > 0) {
         let task = findTask[0];
-        let manager = new TaskManager("task", this.data);
         log(this, dictionary.log.taskAdded, task.id);
+        let manager = new TaskManager(
+          "task",
+          this.data,
+          this.manager_completeHandler
+        );
+        this.managers.push(manager);
         manager.init();
         manager.start();
         manager.startTask(task);
-
-        this.managers.push(manager);
-
-        // manager.destroy();
-        // manager.update(this.appState);
+      }
+    } else {
+      if (this.managers.length >= this.data.maxThreads) {
+        log(this, dictionary.log.tooManyTasksError);
       }
     }
   }

@@ -5,7 +5,7 @@ const dictionary = {
     },
     taskExists: {
       error: "task",
-      message: "Уже есть задача в работе",
+      message: "Эта задача уже в работе",
     },
     taskCorrupted: {
       error: "task",
@@ -49,6 +49,7 @@ const dictionary = {
     taskConverted: "02:Видео успешно сконвертировано",
     taskCallback: "02:Callback успешно отправлен",
     taskAdded: "02:Задача добавлена в очередь",
+    taskCompletes: "02:Задача завершена",
 
     converterStartMessage: "Сервис запущен",
     converterStopMessage: "Сервис остановлен",
@@ -61,6 +62,9 @@ const dictionary = {
     convertError: "03:Ошибка конвертирования GIF",
     deleteError: "03:Не удается удалить файл",
     callbackError: "03:Не удается вызвать callback после завершения задачи",
+
+    tooManyTasksError:
+      "03:Нет возможности взять задачу в работу, все сборщики заняты",
 
     undefinedLogError: "04:Попытка записи в незарегистрированный лог",
     logSaveError: "04:Не удалось записать лог на диск",

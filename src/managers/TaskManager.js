@@ -225,7 +225,7 @@ class TaskManager extends AbstractManager {
   }
 
   finishTask() {
-    this.finishCallback();
+    this.finishCallback(this);
   }
 }
 
