@@ -5,6 +5,12 @@
 dist
 build
 
+package-lock.json
+
+.env
+.env.deploy
+.env.dev
+
 public/temp
 public/output
 
@@ -94,7 +100,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-# .env
+.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
