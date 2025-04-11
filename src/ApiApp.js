@@ -123,7 +123,9 @@ class ApiApp {
     this.totalCounter++;
     this.stepCounter++;
 
-    displayIteration(this.cycleCounter, this.stepCounter);
+    if (process.env.NODE_ENV === "development") {
+      displayIteration(this.cycleCounter, this.stepCounter);
+    }
 
     this.configuration.update();
     this.rootManager.update(this.appState);

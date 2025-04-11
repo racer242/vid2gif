@@ -11,6 +11,8 @@ package-lock.json
 .env.deploy
 .env.dev
 
+ecosystem.config.js
+
 public/temp
 public/output
 
