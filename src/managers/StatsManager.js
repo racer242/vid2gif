@@ -1,6 +1,5 @@
 import dictionary from "../configuration/dictionary";
 import pidusage from "pidusage";
-import publicIp from "../improve/get-public-ip";
 import getInternalIp from "get-internal-ip";
 import AbstractManager from "../abstracts/AbstractManager";
 import { log } from "../services/Logger";
@@ -21,25 +20,14 @@ class StatsManager extends AbstractManager {
 
     this.lastTime = 0;
 
-    publicIp.getPublicIpFromHTTP((err, address) => {
-      if (err) {
-        log(this, dictionary.log.publicIpError);
-        return;
-      }
-      let internalIp = "---";
-      let ipData = getInternalIp.v4();
-      if (ipData) {
-        internalIp = ipData[Object.keys(ipData)[0]]?.address;
-      }
-      this.publicIp = Array.isArray(address) ? address[0] : address;
-      this.internalIp = internalIp;
+    let internalIp = "---";
+    let ipData = getInternalIp.v4();
+    if (ipData) {
+      internalIp = ipData[Object.keys(ipData)[0]]?.address;
+    }
+    this.internalIp = internalIp;
 
-      log(
-        this,
-        dictionary.log.ipAddressGot,
-        this.publicIp + " / " + this.internalIp
-      );
-    });
+    log(this, dictionary.log.ipAddressGot, this.internalIp);
   }
 
   update(data) {

@@ -97,9 +97,7 @@ const dictionary = {
     checkFileError: "03:Не удалось проверить файл на изменение",
     checkFileDoesntExistError:
       "03:Файл не найден. Не удалось проверить файл на изменение",
-
-    publicIpError: "04:Ошибка получения глобального IP-адреса",
-    ipAddressGot: "IP адреса получены",
+    ipAddressGot: "IP адрес",
   },
 
   replace: {
