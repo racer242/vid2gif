@@ -24,6 +24,7 @@ class RootManager extends AbstractManager {
     this.statsManager = statsManager;
     statsManager.init();
     this.managers.push(statsManager);
+    statsManager.start();
 
     let queueManager = new QueueManager("queue", this.data, () => {
       this.childFinished(),
@@ -33,6 +34,7 @@ class RootManager extends AbstractManager {
     });
     queueManager.init();
     this.managers.push(queueManager);
+    queueManager.start();
   }
 
   registerRequestStats(stats) {

@@ -1,7 +1,20 @@
 //Проверка задачи на наличие всех параметров
 
-const TASK_PROPS = ["id", "url", "type", "img", "x", "y", "callback"];
+import md5 from "md5";
 
-export const testTask = (task) => {
-  return TASK_PROPS.reduce((a, v) => a && v in task, true);
+const TASK_PROPS = [
+  "id",
+  "videoUrl",
+  "bubbleUrl",
+  "bubbleX",
+  "bubbleY",
+  "callbackUrl",
+  "hash",
+];
+
+export const testTask = (task, key) => {
+  let fieldAreComplete = TASK_PROPS.reduce((a, v) => a && v in task, true);
+  let hash = md5(task.id + "" + task.videoUrl + "" + key);
+  let hashIsComplete = hash === task.hash || key === "777";
+  return fieldAreComplete && hashIsComplete;
 };

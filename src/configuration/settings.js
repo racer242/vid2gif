@@ -35,6 +35,17 @@ const settings = {
   consoleOutputLevels: process.env.CONSOLE_LEVELS
     ? String(process.env.CONSOLE_LEVELS)
     : null,
+
+  secretKey: process.env.SECRET_KEY ? String(process.env.SECRET_KEY) : null,
+
+  callbackRetryCount: process.env.CALLBACK_RETRY_COUNT
+    ? Number(process.env.CALLBACK_RETRY_COUNT)
+    : 3,
+
+  callbackRetryDuration: process.env.CALLBACK_RETRY_DURATION
+    ? Number(process.env.CALLBACK_RETRY_DURATION)
+    : 5000,
+
   builderId: "api",
   clearLogs: process.env.CLEAR_LOGS === "1",
 
@@ -47,16 +58,15 @@ const settings = {
   },
   zeroConfiguration: {
     updateInterval: 1000,
-    updateStateFreq: 10,
     maxHistoryLength: 400,
     statsCheckInterval: 5000,
-    taskCheckInterval: 1000,
     queueCheckInterval: 1000,
-    videoStart: 1,
+    previewOffset: 2,
+    videoStart: 0,
     videoDuration: 7,
     videoSize: 420,
     videoFps: 24,
-    maxThreads: 3,
+    maxThreads: 10,
   },
 };
 export default settings;

@@ -4,12 +4,12 @@ const dictionary = {
       message: "Задача принята в работу",
     },
     taskExists: {
-      error: "task",
+      errorCode: "DOUBLE_ID",
       message: "Эта задача уже в работе",
     },
     taskCorrupted: {
-      error: "task",
-      message: "В задаче недостаточно параметров",
+      errorCode: "WRONG_HASH",
+      message: "Нарушена целостность параметров запроса на выполнение задачи",
     },
     error404: {
       error: "request",
@@ -25,20 +25,23 @@ const dictionary = {
     dashboard: {},
     error: {
       error: "server",
-      content: "Внутренняя ошибка сервера",
+      message: "Внутренняя ошибка сервера",
     },
 
-    downloadVideoError: {
-      error: "task",
-      content: "Ошибка скачивания видео",
-    },
-    downloadImageError: {
-      error: "task",
-      content: "Ошибка скачивания изображения",
+    downloadError: {
+      status: "ERROR",
+      code: "WRONG_URL",
+      message: "Ошибка скачивания",
     },
     convertError: {
-      error: "task",
-      content: "Ошибка конвертации видео",
+      status: "ERROR",
+      code: "CONVERT",
+      message: "Ошибка конвертации",
+    },
+
+    taskCompleted: {
+      status: "COMPLETED",
+      message: "Успешно сконвертировано",
     },
   },
 
@@ -46,14 +49,20 @@ const dictionary = {
     taskStarted: "02:Задача стартовала",
     taskVideoDownloaded: "02:Видео успешно загружено",
     taskImageDownloaded: "02:Изображение успешно загружено",
-    taskConverted: "02:Видео успешно сконвертировано",
+    taskPreview1Converted: "02:Preview1 успешно создано",
+    taskPreview2Converted: "02:Preview2 успешно создано",
+    taskGifConverted: "02:Gif успешно создан",
     taskCallback: "02:Callback успешно отправлен",
     taskAdded: "02:Задача добавлена в очередь",
     taskCompletes: "02:Задача завершена",
+    uncompletedTasksDetected:
+      "02:После перезагрузки обнаружены незавершенные задачи",
 
     downloadVideoError: "03:Ошибка скачивания видео",
     downloadImageError: "03:Ошибка скачивания изображения",
-    convertError: "03:Ошибка конвертирования GIF",
+    convertPreviewError: "03:Ошибка конвертирования Preview",
+    convertGifError: "03:Ошибка конвертирования GIF",
+    saveTaskConfigError: "03:Не удалось сохранить файл конфигурации задачи",
     deleteError: "03:Не удается удалить файл",
     callbackError: "03:Не удается вызвать callback после завершения задачи",
 

@@ -1,8 +1,5 @@
 import express from "express";
 import dictionary from "../configuration/dictionary.js";
-import { pathExists } from "../helpers/fileTools.js";
-import path from "path";
-import appRoot from "app-root-path";
 import settings from "../configuration/settings.js";
 import { testTask } from "../helpers/taskTools.js";
 
@@ -10,22 +7,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.post("/*", async (req, res, next) => {
-  let id = req.query.id;
-
-  let filePath = path.join(settings.outputLocation, id + ".gif");
-  if (pathExists(filePath)) {
-    res.sendFile(filePath);
-    return;
-  }
-
   let appState = req.app.get("appState");
+
+  appState.server = req.protocol + "://" + req.get("host");
 
   if (!appState.queue) appState.queue = [];
   let queue = appState.queue;
 
   let task = {
     time: Date.now(),
-    ...req.query,
+    ...req.body,
     status: "init",
   };
 
@@ -34,14 +25,14 @@ router.post("/*", async (req, res, next) => {
   );
 
   if (findTask.length > 0) {
-    res.json(dictionary.responces.taskExists);
+    res.status(400).json(dictionary.responces.taskExists);
   } else {
-    if (!testTask(task)) {
-      res.json(dictionary.responces.taskCorrupted);
+    if (!testTask(task, settings.secretKey)) {
+      res.status(400).json(dictionary.responces.taskCorrupted);
     } else {
       task.status = "wait";
       queue.push(task);
-      res.json(dictionary.responces.taskAccepted);
+      res.status(200).json(dictionary.responces.taskAccepted);
     }
   }
 });

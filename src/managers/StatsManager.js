@@ -31,7 +31,7 @@ class StatsManager extends AbstractManager {
   }
 
   update(data) {
-    if (this.data.statsCheckInterval <= Date.now() - this.lastTime) {
+    if (this.data?.statsCheckInterval <= Date.now() - this.lastTime) {
       this.updateState(data);
       this.lastTime = Date.now();
     }
@@ -91,7 +91,7 @@ class StatsManager extends AbstractManager {
             .toString()
             .padStart(2, "0")}`,
         });
-        if (output.performance.length > this.data.maxHistoryLength) {
+        if (output.performance.length > this.data?.maxHistoryLength) {
           output.performance.splice(0, 1);
         }
 

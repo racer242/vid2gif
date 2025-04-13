@@ -2,6 +2,10 @@ import dictionary from "../configuration/dictionary";
 import AbstractManager from "../abstracts/AbstractManager";
 import { log } from "../services/Logger";
 import TaskManager from "./TaskManager";
+import { getFileNamesInFolder, readFile } from "../helpers/fileTools";
+import settings from "../configuration/settings";
+import path from "path";
+import dirtyJson from "dirty-json";
 
 /**
  * Queue Manager
@@ -16,12 +20,45 @@ class QueueManager extends AbstractManager {
     this.lastTime = 0;
     this.managers = [];
     this.manager_completeHandler = this.manager_completeHandler.bind(this);
+    this.startTasks = null;
   }
 
-  update(data) {
+  start() {
+    super.start();
+    let fileDir = settings.outputLocation;
+    let fileNames = getFileNamesInFolder(fileDir, /json/gi);
+    if (fileNames?.length > 0) {
+      this.startTasks = [];
+      for (let i = 0; i < fileNames.length; i++) {
+        let taskPath = path.join(fileDir, fileNames[i]);
+        let task = readFile(taskPath);
+        if (task) {
+          this.startTasks.push(dirtyJson.parse(task));
+        }
+      }
+    }
+  }
+
+  update(appState) {
     if (this.data.queueCheckInterval <= Date.now() - this.lastTime) {
       this.lastTime = Date.now();
-      this.processQueue(data);
+      if (this.startTasks) {
+        if (!appState.queue) {
+          appState.queue = [];
+        }
+        appState.queue = appState.queue.concat(this.startTasks);
+        log(
+          this,
+          dictionary.log.uncompletedTasksDetected,
+          this.startTasks.length
+        );
+        this.startTasks = null;
+      }
+      this.processQueue(appState);
+
+      if (appState.queue) {
+        appState.queue = appState.queue.filter((v) => v.status !== "ready");
+      }
     }
     this.callFinishCallback();
   }
@@ -32,9 +69,9 @@ class QueueManager extends AbstractManager {
     manager.destroy();
   }
 
-  processQueue(data) {
-    if (data?.queue) {
-      let findTask = data.queue.filter((v) => v.status === "wait");
+  processQueue(appState) {
+    if (appState.queue) {
+      let findTask = appState.queue.filter((v) => v.status === "wait");
       if (findTask.length > 0) {
         if (this.managers.length >= this.data.maxThreads) {
           log(this, dictionary.log.tooManyTasksError);
@@ -44,6 +81,7 @@ class QueueManager extends AbstractManager {
           let manager = new TaskManager(
             "task",
             this.data,
+            appState,
             this.manager_completeHandler
           );
           this.managers.push(manager);

@@ -16,6 +16,7 @@ import taskRouter from "./routes/taskRouter.js";
 import dictionary from "./configuration/dictionary.js";
 import settings from "./configuration/settings.js";
 import ApiApp from "./ApiApp.js";
+import resourceRouter from "./routes/resourceRouter.js";
 
 // Приложение на базе Express
 const app = express();
@@ -42,14 +43,14 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use("/api/log/", logRouter);
 app.use("/api/stats/", statsRouter);
-app.use("/api/task/", taskRouter);
+app.use("/api/makeGif", taskRouter);
+app.use(resourceRouter);
 
 // Роутер, обрабатывающий индекс
 app.use("/", indexRouter);
 
 // Обработчик необработанного запроса - генерирует ошибку 404
 app.use(function (req, res, next) {
-  // next(createError(404));
   res.status(404);
   res.send(dictionary.responces.error404);
 });
@@ -82,6 +83,7 @@ app.use(function (err, req, res, next) {
 // Состояние модифицируется приложением и при любом запросе выдается актуальная
 // информация
 var appState = {};
+
 app.set("appState", appState);
 
 // Создание API Manager и его запуск
