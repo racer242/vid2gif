@@ -358,10 +358,27 @@ class TaskManager extends AbstractManager {
     //     '*H[s2];[s2][p]paletteuse"',
   }
   async sendSuccessCallback() {
-    let staticPngUrl = this.appState.server + "/api/image1/" + this.task.id;
+    let staticPngUrl =
+      this.appState.server +
+      "/api/image1/" +
+      this.task.id +
+      "/image1_" +
+      this.task.id +
+      ".png";
     let staticPngWithBubbleUrl =
-      this.appState.server + "/api/image2/" + this.task.id;
-    let gifUrl = this.appState.server + "/api/gif/" + this.task.id;
+      this.appState.server +
+      "/api/image2/" +
+      this.task.id +
+      "/image2_" +
+      this.task.id +
+      ".png";
+    let gifUrl =
+      this.appState.server +
+      "/api/gif/" +
+      this.task.id +
+      "/gif_" +
+      this.task.id +
+      ".gif";
     let hash = md5(staticPngUrl + "" + gifUrl + "" + settings.secretKey);
 
     await this.sendCallback({
