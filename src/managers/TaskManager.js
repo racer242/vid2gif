@@ -277,10 +277,10 @@ class TaskManager extends AbstractManager {
         this.data.videoSize +
         ")'" +
         ":flags=lanczos[s1];[s1][1:v]overlay=" +
-        this.task.bubbleX +
-        ":" +
-        this.task.bubbleY +
-        '"',
+        Number(this.task.bubbleX) / 100 +
+        "*W:" +
+        Number(this.task.bubbleY) / 100 +
+        '*H"',
     });
     options.push({ cmd: "-frames:v", param: 1 });
     options.push({ param: this.task.preview2Path });
@@ -312,10 +312,10 @@ class TaskManager extends AbstractManager {
         this.data.videoSize +
         ")'" +
         ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
-        this.task.bubbleX +
-        ":" +
-        this.task.bubbleY +
-        '[s2];[s2][p]paletteuse"',
+        Number(this.task.bubbleX) / 100 +
+        "*W:" +
+        Number(this.task.bubbleY) / 100 +
+        '*H[s2];[s2][p]paletteuse"',
     });
     options.push({ cmd: "-loop", param: 0 });
     options.push({ param: this.task.gifPath });
