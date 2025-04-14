@@ -43,7 +43,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use("/api/log/", logRouter);
 app.use("/api/stats/", statsRouter);
-app.use("/api/makeGif", taskRouter);
+app.use(taskRouter);
+app.use(taskRouter);
 app.use(resourceRouter);
 
 // Роутер, обрабатывающий индекс

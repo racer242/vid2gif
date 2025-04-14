@@ -6,7 +6,8 @@ import { testTask } from "../helpers/taskTools.js";
 var router = express.Router();
 
 /* GET home page. */
-router.post("/*", async (req, res, next) => {
+router.post("/api/make:format", async (req, res, next) => {
+  let format = req.params.format;
   let appState = req.app.get("appState");
 
   appState.server = req.protocol + "://" + req.get("host");
@@ -17,6 +18,7 @@ router.post("/*", async (req, res, next) => {
   let task = {
     time: Date.now(),
     ...req.body,
+    format,
     status: "init",
   };
 

@@ -57,7 +57,9 @@ class QueueManager extends AbstractManager {
       this.processQueue(appState);
 
       if (appState.queue) {
-        appState.queue = appState.queue.filter((v) => v.status !== "ready");
+        appState.queue = appState.queue.filter(
+          (v) => v.status !== "ready" && v.status !== "error"
+        );
       }
     }
     this.callFinishCallback();

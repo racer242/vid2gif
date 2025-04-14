@@ -28,11 +28,102 @@ class TaskManager extends AbstractManager {
   async startTask(task) {
     this.task = task;
 
+    switch (task.format) {
+      case "Mp4":
+        await this.startMp4Task(task);
+        break;
+      case "Gif":
+        await this.startGifTask(task);
+        break;
+      default:
+        this.task.status = "error";
+        log(this, dictionary.log.wrongFormatErrer, this.task.id);
+        this.finishTask();
+        return;
+    }
+  }
+
+  async startMp4Task(task) {
     this.saveTaskConfig();
-
     this.task.status = "run";
+    log(
+      this,
+      dictionary.log.taskStarted,
+      this.task.id,
+      "Формат: " + this.task.format
+    );
+    this.task.status = "download";
+    try {
+      await this.downloadVideo();
+    } catch (error) {
+      log(
+        this,
+        dictionary.log.downloadVideoError,
+        this.task.videoUrl,
+        this.task.videoPath,
+        error.message
+      );
+      this.task.status = "error";
+      this.task.error = "Download video error";
+      this.deleteConfig();
+      await this.sendCallback({
+        ...dictionary.responces.downloadError,
+        errorData: this.task.videoUrl,
+      });
+      this.finishTask();
+      return;
+    }
+    log(
+      this,
+      dictionary.log.taskVideoDownloaded,
+      this.task.id,
+      this.task.videoUrl
+    );
+    this.task.status = "convertToMp4";
+    try {
+      await this.convertToMp4Task();
+    } catch (error) {
+      log(
+        this,
+        dictionary.log.convertMp4Error,
+        this.task.videoPath,
+        this.task.mp4Path,
+        error.message
+      );
+      this.task.status = "error";
+      this.task.error = "Convert error";
+      this.deleteConfig();
+      this.deleteVideo();
+      await this.sendCallback({
+        ...dictionary.responces.convertError,
+        errorData: this.task.mp4Path,
+      });
+      this.finishTask();
+      return;
+    }
+    log(this, dictionary.log.taskMp4Converted, this.task.id);
 
-    log(this, dictionary.log.taskStarted, this.task.id);
+    this.deleteConfig();
+    this.deleteVideo();
+
+    this.task.status = "callback";
+    await this.sendSuccessMp4Callback();
+
+    this.task.status = "ready";
+    this.task.error = "";
+
+    this.finishTask();
+  }
+
+  async startGifTask(task) {
+    this.saveTaskConfig();
+    this.task.status = "run";
+    log(
+      this,
+      dictionary.log.taskStarted,
+      this.task.id,
+      "Формат: " + this.task.format
+    );
 
     this.task.status = "download";
     try {
@@ -101,8 +192,8 @@ class TaskManager extends AbstractManager {
         this.task.preview1Path,
         error.message
       );
-      task.status = "error";
-      task.error = "Convert error";
+      this.task.status = "error";
+      this.task.error = "Convert error";
       this.deleteConfig();
       this.deleteVideo();
       this.deleteImage();
@@ -126,8 +217,8 @@ class TaskManager extends AbstractManager {
         this.task.preview2Path,
         error.message
       );
-      task.status = "error";
-      task.error = "Convert error";
+      this.task.status = "error";
+      this.task.error = "Convert error";
       this.deleteConfig();
       this.deleteVideo();
       this.deleteImage();
@@ -151,8 +242,8 @@ class TaskManager extends AbstractManager {
         this.task.gifPath,
         error.message
       );
-      task.status = "error";
-      task.error = "Convert error";
+      this.task.status = "error";
+      this.task.error = "Convert error";
       this.deleteConfig();
       this.deleteVideo();
       this.deleteImage();
@@ -169,8 +260,8 @@ class TaskManager extends AbstractManager {
     this.deleteVideo();
     this.deleteImage();
 
-    task.status = "callback";
-    await this.sendSuccessCallback();
+    this.task.status = "callback";
+    await this.sendSuccessGifCallback();
 
     this.task.status = "ready";
     this.task.error = "";
@@ -364,7 +455,37 @@ class TaskManager extends AbstractManager {
     //     Number(this.task.bubbleY) / 100 +
     //     '*H[s2];[s2][p]paletteuse"',
   }
-  async sendSuccessCallback() {
+
+  async convertToMp4Task() {
+    let fileDir = settings.outputLocation;
+    makeDir(fileDir);
+    this.task.mp4Path = path.join(fileDir, this.task.id + "_video.mp4");
+    deleteFile(this.task.mp4Path);
+    let options = [];
+    options.push({ cmd: "-ss", param: this.data.videoStart });
+    options.push({ cmd: "-t", param: this.data.videoDuration });
+    options.push({ cmd: "-i", param: this.task.videoPath });
+    options.push({
+      cmd: "-filter_complex",
+      param:
+        '"' +
+        "crop='min(ih,iw)':'min(ih,iw)'" +
+        "," +
+        "scale=" +
+        this.data.videoSize +
+        ":" +
+        this.data.videoSize +
+        ':flags=lanczos"',
+    });
+    options.push({ cmd: "-loop", param: 0 });
+    options.push({ param: this.task.mp4Path });
+
+    let commandLine = this.makeCommandLine(options);
+
+    await ffmpeg.run(commandLine);
+  }
+
+  async sendSuccessGifCallback() {
     let staticPngUrl =
       this.appState.server +
       "/api/image1/" +
@@ -393,6 +514,23 @@ class TaskManager extends AbstractManager {
       staticPngUrl,
       staticPngWithBubbleUrl,
       gifUrl,
+      hash,
+    });
+  }
+
+  async sendSuccessMp4Callback() {
+    let videoUrl =
+      this.appState.server +
+      "/api/mp4/" +
+      this.task.id +
+      "/video_" +
+      this.task.id +
+      ".mp4";
+    let hash = md5(videoUrl + "" + settings.secretKey);
+
+    await this.sendCallback({
+      ...dictionary.responces.taskCompleted,
+      videoUrl,
       hash,
     });
   }

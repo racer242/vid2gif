@@ -59,13 +59,13 @@ const settings = {
   zeroConfiguration: {
     updateInterval: 1000,
     maxHistoryLength: 400,
-    statsCheckInterval: 5000,
-    queueCheckInterval: 1000,
+    statsCheckInterval: 10000,
+    queueCheckInterval: 10000,
     previewOffset: 2,
     videoStart: 0,
     videoDuration: 7,
     videoSize: 420,
-    videoFps: 10,
+    videoFps: 12,
     maxThreads: 10,
   },
 };

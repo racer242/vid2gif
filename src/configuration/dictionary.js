@@ -52,6 +52,7 @@ const dictionary = {
     taskPreview1Converted: "02:Preview1 успешно создано",
     taskPreview2Converted: "02:Preview2 успешно создано",
     taskGifConverted: "02:Gif успешно создан",
+    taskMp4Converted: "02:Mp4 успешно создан",
     taskCallback: "02:Callback успешно отправлен",
     taskAdded: "02:Задача добавлена в очередь",
     taskCompletes: "02:Задача завершена",
@@ -62,9 +63,11 @@ const dictionary = {
     downloadImageError: "03:Ошибка скачивания изображения",
     convertPreviewError: "03:Ошибка конвертирования Preview",
     convertGifError: "03:Ошибка конвертирования GIF",
+    convertMp4Error: "03:Ошибка конвертирования Mp4",
     saveTaskConfigError: "03:Не удалось сохранить файл конфигурации задачи",
     deleteError: "03:Не удается удалить файл",
     callbackError: "03:Не удается вызвать callback после завершения задачи",
+    wrongFormatErrer: "03:Указан неверный формат задачи",
 
     tooManyTasksError:
       "03:Нет возможности взять задачу в работу, все сборщики заняты",

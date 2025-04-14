@@ -34,5 +34,14 @@ resourceRouter.get("/api/gif/:id/:name", function (req, res, next) {
   }
   next();
 });
+resourceRouter.get("/api/mp4/:id/:name", function (req, res, next) {
+  let id = req.params.id;
+  let filePath = path.join(settings.outputLocation, id + "_video.mp4");
+  if (pathExists(filePath)) {
+    res.sendFile(filePath);
+    return;
+  }
+  next();
+});
 
 export default resourceRouter;
