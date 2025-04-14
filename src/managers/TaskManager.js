@@ -314,11 +314,11 @@ class TaskManager extends AbstractManager {
         this.data.videoSize +
         ":" +
         this.data.videoSize +
-        ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
+        ":flags=lanczos[ss];[ss][1:v]overlay=" +
         Number(this.task.bubbleX) / 100 +
         "*W:" +
         Number(this.task.bubbleY) / 100 +
-        '*H[s2];[s2][p]paletteuse"',
+        '*H,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse"',
     });
     options.push({ cmd: "-loop", param: 0 });
     options.push({ param: this.task.gifPath });
@@ -326,6 +326,13 @@ class TaskManager extends AbstractManager {
     let commandLine = this.makeCommandLine(options);
 
     await ffmpeg.run(commandLine);
+
+    // this.data.videoSize +
+    // ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
+    // Number(this.task.bubbleX) / 100 +
+    // "*W:" +
+    // Number(this.task.bubbleY) / 100 +
+    // '*H[s2];[s2][p]paletteuse"',
 
     // options.push({ cmd: "-filter_complex", param: '"[0:v][1:v]overlay=0:0"' });
     // ffmpeg -ss 30 -t 3 -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif

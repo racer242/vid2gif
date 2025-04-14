@@ -65,7 +65,7 @@ const settings = {
     videoStart: 0,
     videoDuration: 7,
     videoSize: 420,
-    videoFps: 24,
+    videoFps: 10,
     maxThreads: 10,
   },
 };
