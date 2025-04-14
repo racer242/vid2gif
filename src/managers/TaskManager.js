@@ -242,9 +242,9 @@ class TaskManager extends AbstractManager {
       cmd: "-filter_complex",
       param:
         '"' +
-        "scale='if(gte(iw,ih)," +
+        "scale='if(gte(ih,iw)," +
         this.data.videoSize +
-        ",-1)':'if(gte(iw,ih),-1," +
+        ",-1)':'if(gte(ih,iw),-1," +
         this.data.videoSize +
         ")'" +
         ":flags=lanczos" +
@@ -271,9 +271,9 @@ class TaskManager extends AbstractManager {
       cmd: "-filter_complex",
       param:
         '"' +
-        "scale='if(gte(iw,ih)," +
+        "scale='if(gte(ih,iw)," +
         this.data.videoSize +
-        ",-1)':'if(gte(iw,ih),-1," +
+        ",-1)':'if(gte(ih,iw),-1," +
         this.data.videoSize +
         ")'" +
         ":flags=lanczos[s1];[s1][1:v]overlay=" +
@@ -306,9 +306,9 @@ class TaskManager extends AbstractManager {
         '"fps=' +
         this.data.videoFps +
         "," +
-        "scale='if(gte(iw,ih)," +
+        "scale='if(gte(ih,iw)," +
         this.data.videoSize +
-        ",-1)':'if(gte(iw,ih),-1," +
+        ",-1)':'if(gte(ih,iw),-1," +
         this.data.videoSize +
         ")'" +
         ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
@@ -359,10 +359,11 @@ class TaskManager extends AbstractManager {
   async sendCallback(request) {
     let retries = settings.callbackRetryCount;
     let needToRetry = false;
+    let data = {};
     do {
       needToRetry = false;
       try {
-        await sendPostRequest(this.task.callbackUrl, {
+        data = await sendPostRequest(this.task.callbackUrl, {
           ...request,
           id: this.task.id,
         });
@@ -377,6 +378,19 @@ class TaskManager extends AbstractManager {
           error.message
         );
         await asyncSleep(settings.callbackRetryDuration);
+      }
+      if (data) {
+        if (data.result === "ERROR") {
+          needToRetry = true;
+          retries--;
+          log(
+            this,
+            dictionary.log.callbackError,
+            this.task.callbackUrl,
+            "Осталось попыток: " + retries,
+            data
+          );
+        }
       }
       if (!needToRetry) {
         log(this, dictionary.log.taskCallback, this.task.id, request);
