@@ -242,11 +242,12 @@ class TaskManager extends AbstractManager {
       cmd: "-filter_complex",
       param:
         '"' +
-        "scale='if(gte(ih,iw)," +
+        "crop='min(ih,iw)':'min(ih,iw)'" +
+        "," +
+        "scale=" +
         this.data.videoSize +
-        ",-1)':'if(gte(ih,iw),-1," +
+        ":" +
         this.data.videoSize +
-        ")'" +
         ":flags=lanczos" +
         '"',
     });
@@ -271,11 +272,12 @@ class TaskManager extends AbstractManager {
       cmd: "-filter_complex",
       param:
         '"' +
-        "scale='if(gte(ih,iw)," +
+        "crop='min(ih,iw)':'min(ih,iw)'" +
+        "," +
+        "scale=" +
         this.data.videoSize +
-        ",-1)':'if(gte(ih,iw),-1," +
+        ":" +
         this.data.videoSize +
-        ")'" +
         ":flags=lanczos[s1];[s1][1:v]overlay=" +
         Number(this.task.bubbleX) / 100 +
         "*W:" +
@@ -306,11 +308,12 @@ class TaskManager extends AbstractManager {
         '"fps=' +
         this.data.videoFps +
         "," +
-        "scale='if(gte(ih,iw)," +
+        "crop='min(ih,iw)':'min(ih,iw)'" +
+        "," +
+        "scale=" +
         this.data.videoSize +
-        ",-1)':'if(gte(ih,iw),-1," +
+        ":" +
         this.data.videoSize +
-        ")'" +
         ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
         Number(this.task.bubbleX) / 100 +
         "*W:" +
@@ -339,6 +342,20 @@ class TaskManager extends AbstractManager {
     //   this.data.videoSize +
     //   ")'" +
     //   ':flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse"',
+
+    // '"fps=' +
+    //     this.data.videoFps +
+    //     "," +
+    //     "scale='if(gte(ih,iw)," +
+    //     this.data.videoSize +
+    //     ",-1)':'if(gte(ih,iw),-1," +
+    //     this.data.videoSize +
+    //     ")'" +
+    //     ":flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][1:v]overlay=" +
+    //     Number(this.task.bubbleX) / 100 +
+    //     "*W:" +
+    //     Number(this.task.bubbleY) / 100 +
+    //     '*H[s2];[s2][p]paletteuse"',
   }
   async sendSuccessCallback() {
     let staticPngUrl = this.appState.server + "/api/image1/" + this.task.id;
