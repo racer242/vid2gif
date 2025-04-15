@@ -62,7 +62,7 @@ const settings = {
     statsCheckInterval: 10000,
     queueCheckInterval: 1000,
     queueClearInterval: 10000,
-    previewOffset: 2,
+    previewOffset: 0.5,
     videoStart: 0,
     videoDuration: 7,
     videoSize: 420,
