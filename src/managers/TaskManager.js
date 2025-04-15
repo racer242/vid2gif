@@ -478,7 +478,8 @@ class TaskManager extends AbstractManager {
         this.data.videoSize +
         ':flags=lanczos"',
     });
-    options.push({ cmd: "-loop", param: 0 });
+    options.push({ cmd: "-vcodec", param: "libx264" });
+    options.push({ cmd: "-acodec", param: "aac" });
     options.push({ param: this.task.mp4Path });
 
     let commandLine = this.makeCommandLine(options);
