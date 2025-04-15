@@ -3,6 +3,7 @@
  */
 
 import AbstractManager from "../abstracts/AbstractManager";
+import settings from "../configuration/settings";
 import QueueManager from "./QueueManager";
 import StatsManager from "./StatsManager";
 
@@ -15,7 +16,7 @@ class RootManager extends AbstractManager {
   }
 
   createChildren() {
-    let statsManager = new StatsManager("stats", this.data, () => {
+    let statsManager = new StatsManager(settings.systemLogId, this.data, () => {
       this.childFinished(),
         () => {
           this.childCreated();
@@ -26,7 +27,7 @@ class RootManager extends AbstractManager {
     this.managers.push(statsManager);
     statsManager.start();
 
-    let queueManager = new QueueManager("queue", this.data, () => {
+    let queueManager = new QueueManager(settings.systemLogId, this.data, () => {
       this.childFinished(),
         () => {
           this.childCreated();

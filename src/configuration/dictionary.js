@@ -74,8 +74,6 @@ const dictionary = {
 
     serviceStartMessage: "Сервис запущен",
     serviceStopMessage: "Сервис остановлен",
-    consoleMessage: "02:Консольный вывод:",
-    errorMessage: "03:Вывод ошибки:",
 
     undefinedLogError: "04:Попытка записи в незарегистрированный лог",
     logSaveError: "04:Не удалось записать лог на диск",
@@ -88,28 +86,28 @@ const dictionary = {
       "01:↑↑↑ Эта ошибка будет повторяться циклически, поэтому ее вывод отключен",
     archivedLogMessage: 'Лог был сохранен в архив "{archiveName}" и очищен',
 
-    mapStarted: "Трекинг карты стартовал",
-    mapChanged: "Трекер карты зафиксировал изменение файла карты",
-    mapPathChanged: "Путь файла карты изменился",
+    mapStarted: "01:Трекинг карты стартовал",
+    mapChanged: "01:Трекер карты зафиксировал изменение файла карты",
+    mapPathChanged: "01:Путь файла карты изменился",
     mapLoadError: "04:Ошибка загрузки/распаковки файла карты",
     mapIsEmptyError: "04:Карта не содержит данных",
     mapParseError: "04:Ошибка разбора карты",
-    mapLoaded: "Карта успешно загружена",
+    mapLoaded: "01:Карта успешно загружена",
     mapWrongExtensionError:
       "04:Указан файл карты незарегистрированного формата:",
 
-    managerListCreated: "10:Создан новый список менеджеров",
-    managerListDestroyed: "10:Cписок менеджеров очищен",
+    managerListCreated: "02:Создан новый список менеджеров",
+    managerListDestroyed: "02:Cписок менеджеров очищен",
 
-    trackingFileAcquired: "Файл принят под наблюдение",
-    trackingFileUpdated: "При проверке было выявлено изменение файла/папки",
+    trackingFileAcquired: "01:Файл принят под наблюдение",
+    trackingFileUpdated: "01:При проверке было выявлено изменение файла/папки",
     trackingFileChanged:
-      "В наблюдаемом пространстве обнаружено изменение файла",
+      "01:В наблюдаемом пространстве обнаружено изменение файла",
     watchInitError: "03:Не удалось инициировать наблюдение за файлом",
     checkFileError: "03:Не удалось проверить файл на изменение",
     checkFileDoesntExistError:
       "03:Файл не найден. Не удалось проверить файл на изменение",
-    ipAddressGot: "IP адрес",
+    ipAddressGot: "01:IP адрес",
   },
 
   replace: {

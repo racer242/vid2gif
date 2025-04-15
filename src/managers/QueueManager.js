@@ -17,7 +17,9 @@ class QueueManager extends AbstractManager {
    */
   constructor(id, data, finishCallback, createdCallback) {
     super(id, data, finishCallback, createdCallback);
-    this.lastTime = 0;
+    this.extId = "queue";
+    this.lastCheckTime = 0;
+    this.lastClearTime = 0;
     this.managers = [];
     this.manager_completeHandler = this.manager_completeHandler.bind(this);
     this.startTasks = null;
@@ -40,8 +42,16 @@ class QueueManager extends AbstractManager {
   }
 
   update(appState) {
-    if (this.data.queueCheckInterval <= Date.now() - this.lastTime) {
-      this.lastTime = Date.now();
+    if (this.data.queueClearInterval <= Date.now() - this.lastClearTime) {
+      this.lastClearTime = Date.now();
+      if (appState.queue) {
+        appState.queue = appState.queue.filter(
+          (v) => v.status !== "ready" && v.status !== "error"
+        );
+      }
+    }
+    if (this.data.queueCheckInterval <= Date.now() - this.lastCheckTime) {
+      this.lastCheckTime = Date.now();
       if (this.startTasks) {
         if (!appState.queue) {
           appState.queue = [];
@@ -55,12 +65,6 @@ class QueueManager extends AbstractManager {
         this.startTasks = null;
       }
       this.processQueue(appState);
-
-      if (appState.queue) {
-        appState.queue = appState.queue.filter(
-          (v) => v.status !== "ready" && v.status !== "error"
-        );
-      }
     }
     this.callFinishCallback();
   }
@@ -81,7 +85,7 @@ class QueueManager extends AbstractManager {
           let task = findTask[0];
           log(this, dictionary.log.taskAdded, task.id);
           let manager = new TaskManager(
-            "task",
+            settings.systemLogId,
             this.data,
             appState,
             this.manager_completeHandler

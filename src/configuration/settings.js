@@ -6,7 +6,7 @@ require("dotenv").config();
 const settings = {
   logFileName: "log.txt",
   logArchiveName: "log api {timestamp}.txt",
-  errorLogId: "root",
+  errorLogId: "system",
   systemLogId: "system",
   logsFolderName: ".logs",
 
@@ -58,9 +58,10 @@ const settings = {
   },
   zeroConfiguration: {
     updateInterval: 1000,
-    maxHistoryLength: 400,
+    maxHistoryLength: 60,
     statsCheckInterval: 10000,
-    queueCheckInterval: 10000,
+    queueCheckInterval: 1000,
+    queueClearInterval: 10000,
     previewOffset: 2,
     videoStart: 0,
     videoDuration: 7,

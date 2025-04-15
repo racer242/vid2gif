@@ -151,7 +151,7 @@ class ApiApp {
   map_changedHandler() {
     this.rootManager.destroy();
     this.rootManager = new RootManager(
-      "root",
+      settings.systemLogId,
       this.data,
       this.rootManager_cycleFinishedHandler
     );

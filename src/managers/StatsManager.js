@@ -14,7 +14,7 @@ class StatsManager extends AbstractManager {
    */
   constructor(id, data, finishCallback, createdCallback) {
     super(id, data, finishCallback, createdCallback);
-
+    this.extId = "stats";
     this.requestStats = [];
     this.lastStatsTime = new Date();
 

@@ -21,6 +21,7 @@ class TaskManager extends AbstractManager {
    */
   constructor(id, data, appState, finishCallback, createdCallback) {
     super(id, data, finishCallback, createdCallback);
+    this.extId = "task";
     this.appState = appState;
     this.task = {};
   }
