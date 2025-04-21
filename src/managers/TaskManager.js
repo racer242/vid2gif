@@ -460,12 +460,43 @@ class TaskManager extends AbstractManager {
   async convertToMp4Task() {
     let fileDir = settings.outputLocation;
     makeDir(fileDir);
+
+    let tsUsed = true;
+
+    this.task.tsPath = path.join(fileDir, this.task.id + "_video.ts");
+    deleteFile(this.task.tsPath);
+    let options = [];
+    options.push({ cmd: "-i", param: this.task.videoPath });
+    options.push({
+      cmd: "-bsf:v",
+      param:
+        '"' +
+        "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1" +
+        '"',
+    });
+    options.push({ cmd: "-c", param: "copy" });
+    options.push({ cmd: "-colorspace", param: "1" });
+    options.push({ cmd: "-color_trc", param: "1" });
+    options.push({ cmd: "-color_primaries", param: "1" });
+    options.push({ param: this.task.tsPath });
+    let commandLine = this.makeCommandLine(options);
+
+    try {
+      await ffmpeg.run(commandLine);
+    } catch (error) {
+      tsUsed = false;
+    }
+
     this.task.mp4Path = path.join(fileDir, this.task.id + "_video.mp4");
     deleteFile(this.task.mp4Path);
-    let options = [];
+    options = [];
     options.push({ cmd: "-ss", param: this.data.videoStart });
     options.push({ cmd: "-t", param: this.data.videoDuration });
-    options.push({ cmd: "-i", param: this.task.videoPath });
+    if (tsUsed) {
+      options.push({ cmd: "-i", param: this.task.tsPath });
+    } else {
+      options.push({ cmd: "-i", param: this.task.videoPath });
+    }
     options.push({
       cmd: "-filter_complex",
       param:
@@ -481,10 +512,11 @@ class TaskManager extends AbstractManager {
     options.push({ cmd: "-vcodec", param: "libx264" });
     options.push({ cmd: "-acodec", param: "aac" });
     options.push({ param: this.task.mp4Path });
-
-    let commandLine = this.makeCommandLine(options);
-
+    commandLine = this.makeCommandLine(options);
     await ffmpeg.run(commandLine);
+    if (tsUsed) {
+      deleteFile(this.task.tsPath);
+    }
   }
 
   async sendSuccessGifCallback() {
